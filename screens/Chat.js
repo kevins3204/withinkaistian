@@ -96,7 +96,8 @@ export default class Chat extends Component<Props> {
                         <View style={styles.backIcon}/>
                         <Text style={styles.title}>궁동-대전역 택시팟</Text>
                         <TouchableWithoutFeedback
-                            onPress={() => this.refs.drawer.open()}>
+                            onPress={() => {this.refs.drawer.open();
+                                            Keyboard.dismiss();}}>
                             <View style={styles.hamburger}/>
                         </TouchableWithoutFeedback>
                     </View>
